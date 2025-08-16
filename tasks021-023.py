@@ -43,3 +43,23 @@ print(friends[1::2])
 
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# From the list friends,
+
+# On the first line, print the 2nd, 3rd, and 4th names.
+
+# On the second line, print the last name and the one before it.
+
+# Note: The code should work dynamically, even if the number of elements in the list changes.
+
+# Example List:
+
+friends = ["Osama", "Ahmed", "Sayed", "Ali", "Mahmoud"]
+
+# Needed Output
+# "Ahmed", "Sayed", "Ali",
+# "Ali", "Mahmoud"
+print(friends[1:4])
+print(friends[-2:])
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
