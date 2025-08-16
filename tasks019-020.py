@@ -49,3 +49,25 @@ num = 10
 print(f"{num:.10f}")
 print ("-----------------task 3 done ---------------")
 #--------------------------------------------------------------
+
+# Problem 04:
+# Convert the number 159.650 into an integer.
+
+# On the first line, print the converted number.
+
+# On the second line, print its type to confirm it is an integer.
+
+# Example:
+
+num = 159.650
+
+# Needed Output
+# 159
+# <class 'int'>
+
+num_int = int(num)
+print(num_int)
+print(type(num_int))
+
+print ("-----------------task 4 done ---------------")
+#--------------------------------------------------------------
