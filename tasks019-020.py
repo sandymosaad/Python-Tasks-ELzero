@@ -1,4 +1,4 @@
-#Problem1:
+#Problem 01:
 #Print all the main types of numbers in Python, each on a separate line.
 
 # Integer
@@ -36,4 +36,16 @@ print(num.real)
 print ("-----------------task 2 done ---------------")
 #--------------------------------------------------------------
 
+# Problem 03:
+# Convert the number 10 into a floating-point number with 10 decimal places after the decimal point.
 
+# Example:
+
+num = 10
+
+# Needed Output
+# 10.0000000000
+
+print(f"{num:.10f}")
+print ("-----------------task 3 done ---------------")
+#--------------------------------------------------------------
