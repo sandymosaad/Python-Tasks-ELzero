@@ -25,3 +25,21 @@ print(friends[-1:][0])
 
 print("--------------------task 1 done -----------------------")
 #---------------------------------------------------------------
+# Problem 02:
+# From the previous list friends = ["Osama", "Ahmed", "Sayed", "Ali", "Mahmoud"],
+
+# On the first line, print the names at odd positions (1st, 3rd, 5th …).
+
+# On the second line, print the names at even positions (2nd, 4th …).
+
+# Example Output:
+
+# "Osama", "Sayed", "Mahmoud"
+# "Ahmed", "Ali"
+
+friends = ["Osama", "Ahmed", "Sayed", "Ali", "Mahmoud"]
+print(friends[0::2])
+print(friends[1::2])
+
+print("--------------------task 2 done -----------------------")
+#---------------------------------------------------------------
