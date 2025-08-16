@@ -71,3 +71,19 @@ print(type(num_int))
 
 print ("-----------------task 4 done ---------------")
 #--------------------------------------------------------------
+# Problem 05:
+# Replace the question mark ? with the correct arithmetic operator so that each equation becomes true.
+
+# Examples:
+
+# 100 ? 115 = -15    
+# 50 ? 30  = 1500     
+# 21 ? 4   = 1        
+# 110 ? 11 = 10       
+# 97 ? 20  = 4       
+
+print(100 - 115)
+print(50 * 30 )
+print(21 % 4)
+print(110/11)
+print(97//20)
