@@ -63,3 +63,17 @@ print(friends[1:4])
 print(friends[-2:])
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+# Problem 04:
+# Update the last two names in the list friends to "Elzero".
+
+# Example List:
+
+friends = ["Osama", "Ahmed", "Sayed", "Ali", "Mahmoud"]
+
+# Needed Output
+# ["Osama", "Ahmed", "Sayed", "Elzero", "Elzero"]
+friends[-2:]=["Elzero",'Elzero']
+print(friends)
+
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
