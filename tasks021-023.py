@@ -98,3 +98,36 @@ friends.append('Salem')
 print(friends)
 print("--------------------task 5 done -----------------------")
 #---------------------------------------------------------------
+# Problem 06:
+
+# Remove the first two names from the list.
+
+# Then, remove the last name from the list.
+
+# Example List:
+
+friends = ["Nasser", "Osama", "Ahmed", "Sayed", "Salem"]
+
+# Needed Output
+# ["Ahmed", "Sayed", "Salem"]
+# ["Ahmed", "Sayed"]
+
+friends[0:2]=[]
+
+print(friends)
+
+friends[-1:]=[]
+print(friends)
+
+# second solition
+friends = ["Nasser", "Osama", "Ahmed", "Sayed", "Salem"]
+
+# Remove first two names
+del friends[:2]
+print(friends)
+
+# Remove last name
+friends.pop()
+print(friends)
+print("--------------------task 6 done -----------------------")
+#---------------------------------------------------------------
