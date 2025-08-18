@@ -131,3 +131,26 @@ friends.pop()
 print(friends)
 print("--------------------task 6 done -----------------------")
 #---------------------------------------------------------------
+# Problem 07:
+
+# Create two more lists with more friends.
+
+# Merge them with the first list so that the final list contains all friends.
+
+# Example Lists:
+
+friends = ["Ahmed", "Sayed"]
+employees = ["Samah", "Eman"]
+school = ["Ramy", "Shady"]
+
+# Needed Output
+# ["Ahmed", "Sayed", "Samah", "Eman", "Ramy", "Shady"]
+
+allLists=friends+employees+school
+print(allLists)
+
+friends.extend(employees)
+friends.extend(school)
+print(friends)
+print("--------------------task 7 done -----------------------")
+#---------------------------------------------------------------
