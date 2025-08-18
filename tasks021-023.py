@@ -77,3 +77,24 @@ print(friends)
 
 print("--------------------task 4 done -----------------------")
 #---------------------------------------------------------------
+# Problem 05:
+
+# Add a friend’s name to the beginning of the list.
+
+# Then, add another friend’s name to the end of the list.
+
+# Example List:
+
+friends = ["Osama", "Ahmed", "Sayed"]
+
+# Needed Output
+# ["Nasser", "Osama", "Ahmed", "Sayed"]
+# ["Nasser", "Osama", "Ahmed", "Sayed", "Salem"]
+
+friends.insert(0, "Nasser")
+print(friends)
+
+friends.append('Salem')
+print(friends)
+print("--------------------task 5 done -----------------------")
+#---------------------------------------------------------------
