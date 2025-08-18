@@ -154,4 +154,24 @@ friends.extend(school)
 print(friends)
 print("--------------------task 7 done -----------------------")
 #---------------------------------------------------------------
+# Problem 08:
 
+# Sort the list of names in ascending order (A → Z).
+
+# Sort the list of names in descending order (Z → A).
+
+# Example List:
+
+friends = ["Ahmed", "Sayed", "Samah", "Eman", "Ramy", "Shady"]
+
+# Needed Output
+# ['Ahmed', 'Eman', 'Ramy', 'Samah', 'Sayed', 'Shady']
+# ['Shady', 'Sayed', 'Samah', 'Ramy', 'Eman', 'Ahmed']
+
+friends.sort()
+print(friends)
+
+friends.sort(reverse=True)
+print(friends)
+print("--------------------task 8 done -----------------------")
+#---------------------------------------------------------------
