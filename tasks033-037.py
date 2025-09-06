@@ -38,3 +38,19 @@ javascript = 70
 print(html > 50 and css > 50 and javascript > 50)
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# create three variables num_one, num_two, and num with values 10, 20, and 20 respectively.
+# On the first line, print the result of checking if num is greater than one of the other two variables but not both.
+# On the second line, print the result of checking if num is greater than both other variables.
+# Needed Output
+#True
+#False
+
+num_one = 10
+num_two = 20
+num = 20
+
+print(num > num_one or num < num_two)   # True
+print(num > num_one and num > num_two)  # False
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
