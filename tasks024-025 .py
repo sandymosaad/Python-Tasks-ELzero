@@ -60,3 +60,38 @@ print(f"{len(friends)} Elements")
 
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+
+# Create a tuple containing numbers from 1 to 3.
+
+# Create another tuple containing letters from "A" to "C".
+
+# Concatenate them into a new tuple.
+
+# Print the new tuple.
+
+# Print the number of elements inside the new tuple.
+
+# Needed Output:
+
+# (1, 2, 3, 'A', 'B', 'C')
+# 6 Elements
+# Tuples
+
+nums = (1, 2, 3)
+letters = ("A", "B", "C")
+
+# Concatenate tuples
+nums_and_letters_one = nums + letters
+
+# Print the new tuple
+print(nums_and_letters_one)
+
+# Print the number of elements
+print(f"{len(nums_and_letters_one)} Elements")
+
+# Print type
+print(type(nums_and_letters_one))
+
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
