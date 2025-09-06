@@ -95,3 +95,25 @@ print(type(nums_and_letters_one))
 
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+# Problem 04:
+# Create a tuple containing numbers from 1 to 4.
+# Unpack the tuple into 3 variables, ignoring the 3rd value.
+# Print the 3 variables.
+# Print the type of the tuple.
+
+# Needed Output:
+
+# 1
+# 2
+# 4
+# <class 'tuple'>   
+
+my_tuple = (1, 2, 3, 4)
+a, b, _, c = my_tuple  # Using underscore for the value we want to ignore
+print(a)
+print(b)
+print(c)
+print(type(my_tuple))
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
+
