@@ -48,3 +48,22 @@ nums_and_letters3 = nums | letters
 print(nums_and_letters3)
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# Create a Set containing numbers from 1 to 3.
+#print(nums)
+# clear the set
+#add a & b to the set
+#remove c from the set (try to remove it again to show that discard doesn't raise an error if the element is not found)
+# print the set after each operation
+
+nums = {1, 2, 3}
+print(nums)
+nums.clear()
+print(nums)
+nums.add('a')
+nums.add('b')
+print(nums)
+nums.discard('c')  # discard won't raise an error if 'c' is not found
+print(nums)
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
