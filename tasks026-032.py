@@ -67,3 +67,18 @@ nums.discard('c')  # discard won't raise an error if 'c' is not found
 print(nums)
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+
+# Problem 04:
+# create two sets
+# check if set_one is subset of set_two
+# print the result
+
+set_one = {1, 2, 3}
+set_two = {1, 2, 3, 4, 5, 6}
+
+# Needed Output
+#True
+
+print(set_one.issubset(set_two))
+print("--------------------task 4 done -----------------------")    
+#---------------------------------------------------------------
