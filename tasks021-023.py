@@ -189,5 +189,24 @@ friends = ["Ahmed", "Sayed", "Samah", "Eman", "Ramy", "Shady"]
 print(len(friends))
 print("--------------------task 9 done -----------------------")
 #---------------------------------------------------------------
+# Problem 10:
+# Create a list of popular programming languages, and inside it include a nested list of popular frameworks.
 
+# On the first line, print the name of the first framework in the nested list.
+
+# On the second line, print the last framework in the nested list.
+# ⚠️ Note: The nested list may grow, but it will always be the last element in the main list.
+
+# Example:
+
+technologies = ["Html", "CSS", "JS", "Python", ["Django", "Flask", "Web"]]
+
+# Needed Output
+# Django
+# Web
+
+print(technologies[-1][0])
+print(technologies[-1][-1])
+print("--------------------task 10 done -----------------------")
+#---------------------------------------------------------------
 
