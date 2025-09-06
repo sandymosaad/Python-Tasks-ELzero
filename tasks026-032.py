@@ -67,3 +67,48 @@ nums.discard('c')  # discard won't raise an error if 'c' is not found
 print(nums)
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+
+# Problem 04:
+# create two sets
+# check if set_one is subset of set_two
+# print the result
+
+set_one = {1, 2, 3}
+set_two = {1, 2, 3, 4, 5, 6}
+
+# Needed Output
+#True
+
+print(set_one.issubset(set_two))
+print("--------------------task 4 done -----------------------")    
+#---------------------------------------------------------------
+
+# Problem 05:
+# Create a dictionary to store the following data:
+# HTML: 90%
+# CSS: 80%
+# Python: 30%
+# AI: 20%
+
+# Create Dictionary Here
+my_dict = {
+    "HTML": "90%",
+    "CSS": "80%",
+    "Python": "30%",
+    "AI": "20%"
+}
+
+# Needed Output
+
+# "HTML Progress Is 90%"
+# "CSS Progress Is 80%"
+# "Python Progress Is 30%"
+# "AI Progress Is 20%"
+# don't Loop for the output
+
+print(f"HTML Progress Is {my_dict['HTML']}")
+print(f"CSS Progress Is {my_dict['CSS']}")  
+print(f"Python Progress Is {my_dict['Python']}")
+print(f"AI Progress Is {my_dict['AI']}")
+print("--------------------task 5 done -----------------------")
+#---------------------------------------------------------------
