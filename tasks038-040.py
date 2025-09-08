@@ -41,3 +41,20 @@ print(f"Hello {fname} {sname[0]} , How Are You?")
 
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+# Problem 04:
+# Create a variable named email that takes the user's input for their email address.
+# Make sure to remove any spaces before and after the email.
+# Make sure all letters are lower case.
+# Print a message in the first line with the person's name only (before the @), with the first letter capitalized.
+# Print a message in the second line with the site name only (between @ and the dot).
+# Print a message in the third line with the top level domain (after the dot).
+
+email = input("Enter Your Email: ").strip().lower()
+print(f"Full Email: {email}")
+print(f'Email Username: {email[:email.index("@")].capitalize()}')
+print(f"Website Name: {email[email.index("@")+1:email.index(".")]}")
+print(f"Email Extension: {email[email.index(".")+1:]}")
+
+print("--------------------task 4 done -----------------------")
+
+#---------------------------------------------------------------
