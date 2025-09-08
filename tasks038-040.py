@@ -28,3 +28,16 @@ elif 16 <= age:
 
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# Problem:
+# Create two variables named first_name and second_name that take the user's input for their first and second names.
+# Make sure to remove any spaces before and after each name.
+# Make sure the first letter of each name is capitalized and the rest are small.
+# Print a welcome message that includes the first name and the first letter of the second name only.
+
+fname =input("Enter Your First Name: ").strip().capitalize()
+sname =input("Enter Your Second Name: ").strip().capitalize()
+print(f"Hello {fname} {sname[0]} , How Are You?")
+
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
