@@ -38,3 +38,37 @@ print('App Is Suitable For You' if age >= 16 else 'App Is Not Suitable For You')
 
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+
+# Problem 03:
+# Create a variable named age that takes the user's input for their age.
+# Make sure the input is converted to an integer, not a string.
+# Make sure to remove any spaces before and after the age.
+# If the age is between 10 and 100, print the following message:
+
+# Your Age In Months Is: x
+# Your Age In Weeks Is: x   
+# Your Age In Days Is: x
+# Your Age In Hours Is: x
+# Your Age In Minutes Is: x
+# Your Age In Seconds Is: x
+
+# If the age is not between 10 and 100, print a message that the age is not valid.  
+
+age = int(input("How Old Are You? ").strip())
+if age > 10 and age < 100:
+    months = age * 12
+    weeks = age * 52
+    days = age * 365
+    hours = days * 24
+    minutes = hours * 60
+    seconds = minutes * 60
+    print(f"Your Age In Months Is: {months}")
+    print(f"Your Age In Weeks Is: {weeks}")
+    print(f"Your Age In Days Is: {days}")
+    print(f"Your Age In Hours Is: {hours}")
+    print(f"Your Age In Minutes Is: {minutes}")
+    print(f"Your Age In Seconds Is: {seconds}")
+else:
+    print("Your Age Is Not Valid")
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
