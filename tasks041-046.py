@@ -27,3 +27,14 @@ else:
 
 print("--------------------task 1 done -----------------------")
 #---------------------------------------------------------------
+# Problem 02:
+# Create a variable named age and assign it your age.
+# Using a single line of code, print "App Is Suitable For You" if the age is 16 or older.
+# Otherwise, print "App Is Not Suitable For You".   
+
+
+age = 13
+print('App Is Suitable For You' if age >= 16 else 'App Is Not Suitable For You')
+
+print("--------------------task 2 done -----------------------")
+#---------------------------------------------------------------
