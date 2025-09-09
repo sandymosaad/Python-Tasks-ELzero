@@ -18,3 +18,21 @@ else:
 
 print("--------------------task 1 done -----------------------")
 #---------------------------------------------------------------
+# Problem 02:
+# Create a list with five friends' names, at least two in all lowercase and the rest with the first letter capitalized.
+# Use a while loop to print all names, ignoring those that start with a lowercase letter.
+# Print the number of ignored names programmatically.
+
+friends = ["osama", "ahmed", "Sayed", "Ali", "Mahmoud"]
+index = 0
+ignored_count = 0
+while index < len(friends):
+    name = friends[index]
+    if name[0].islower():
+        ignored_count += 1
+    else:
+        print(name)
+    index += 1
+print(f"Friends Printed And Ignored Names Count Is {ignored_count}")
+print("--------------------task 2 done -----------------------")
+#---------------------------------------------------------------
