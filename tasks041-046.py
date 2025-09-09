@@ -72,3 +72,25 @@ else:
     print("Your Age Is Not Valid")
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+
+# Problem 04:
+# Create a variable named country that takes the user's input for their country.
+# Make sure to remove any spaces before and after the country name.
+# Make sure the first letter of each word in the country name is capitalized and the rest are small.
+# Create a list of countries that are eligible for a discount: "Egypt", "Palestine", "Syria", "Yemen", "KSA", "USA", "Bahrain", "England".
+# Create a variable named price and assign it the value of 100.
+# Create a variable named discount and assign it the value of 30.
+# If the country is in the list of eligible countries, print a message with the country name and the price after applying the discount.
+# If the country is not in the list, print a message that the country is not eligible for the discount and the full price.
+
+country = input("Input Your Country").strip().capitalize()
+countries = ["Egypt", "Palestine", "Syria", "Yemen", "KSA", "USA", "Bahrain", "England"]
+price = 100
+discount = 30
+if country in countries:
+    discounted_price = price - (price * discount / 100)
+    print(f"Your Country Is {country}, Your Price After Discount Is {discounted_price}")
+else:
+    print(f"Your Country Is Not Eligible For Discount, Your Price Is {price}")
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
