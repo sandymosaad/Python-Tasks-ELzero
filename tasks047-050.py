@@ -58,3 +58,43 @@ while skills:
 
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+# Problem 04:
+# Create a list named my_friends that contains at least 4 friends' names.
+# Use a while loop to allow the user to add more friends' names to the list until it contains 4 names.
+# Make sure the first letter of each name is capitalized and the rest are small.
+# Print a message for each added name.
+# If the name is all uppercase, print a message that the name can't be all uppercase and
+# don't add it to the list.
+# If the name is all lowercase, capitalize the first letter and add it to the list,
+# and print a message that the name was added and capitalized.
+# If the name is in title case (first letter capitalized), add it to the list
+# and print a message that the name was added.
+# If the name is mixed case (some letters uppercase and some lowercase),
+# capitalize the first letter and add it to the list,
+# and print a message that the name was added and capitalized.
+
+my_friends = []
+max_friends = 4
+
+while len(my_friends) < max_friends:
+    new_friend = input("Enter Your Friend Name: ").strip()
+    if new_friend.isupper():
+        print("Friend Name Can't Be All Uppercase")
+        continue
+    elif new_friend.islower():
+        new_friend = new_friend.capitalize()
+        my_friends.append(new_friend)
+        print(f"{new_friend} Added and Capitalized first letter")
+    elif new_friend.istitle():
+        my_friends.append(new_friend)
+        print(f"{new_friend} Added")
+    else:
+        new_friend = new_friend.capitalize()
+        my_friends.append(new_friend)
+        print(f"{new_friend} Added and Capitalized first letter")
+    places_left = max_friends - len(my_friends)
+    if places_left > 0:
+        print(f"{places_left} Places Left")
+print(my_friends)
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
