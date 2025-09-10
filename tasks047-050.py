@@ -36,3 +36,25 @@ while index < len(friends):
 print(f"Friends Printed And Ignored Names Count Is {ignored_count}")
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# Create a list named skills that contains the following programming skills: "HTML", "CSS", "JavaScript", "PHP", "Python".
+# Use a while loop to print each skill in the list one by one.
+
+# Needed Output
+# "HTML"
+# "CSS"
+# "JavaScript"
+# "PHP"
+# "Python"
+
+
+# Code
+skills = ["HTML", "CSS", "JavaScript", "PHP", "Python"]
+
+while skills:
+
+  # Type The Code Here in One Line
+    print(skills.pop(0))
+
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
