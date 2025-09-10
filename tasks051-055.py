@@ -27,3 +27,45 @@ for num in range(1, 21):
     print(str(num).zfill(2))
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+# Problem 03:
+# Create a dictionary named my_ranks that contains your ranks in the following subjects:
+# Math: A
+# Science: B
+# Drawing: A
+# Sports: C
+# Calculate and print the total score based on the following rules:
+# Rank A: 100 points
+# Rank B: 80 points
+# Rank C: 40 points
+
+# Input
+my_ranks = {
+  'Math': 'A',
+  "Science": 'B',
+  'Drawing': 'A',
+  'Sports': 'C'
+}
+# Needed Output
+# "My Rank in Math Is A And This Equal 100 Points"
+# "My Rank in Science Is B And This Equal 80 Points"
+# "My Rank in Drawing Is A And This Equal 100 Points"
+# "My Rank in Sports Is C And This Equal 40 Points"
+# "Total Points Is 320"
+
+
+
+total_score = 0
+for subject, rank in my_ranks.items():
+    if rank == 'A':
+        print(f"Your Rank in {subject} Is {rank}, And This Equal 100 Points.")
+        total_score += 100
+    elif rank == 'B':
+        print(f"Your Rank in {subject} Is {rank}, And This Equal 80 Points.")
+        total_score += 80
+    elif rank == 'C':
+        print(f"Your Rank in {subject} Is {rank}, And This Equal 40 Points.")
+        total_score += 40
+print(f"Total Score Is {total_score} Points.")
+
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
