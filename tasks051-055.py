@@ -69,3 +69,71 @@ print(f"Total Score Is {total_score} Points.")
 
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
+# Problem 04:
+# Input
+students = {
+  "Ahmed": {
+    "Math": "A",
+    "Science": "D",
+    "Draw": "B",
+    "Sports": "C",
+    "Thinking": "A"
+  },
+  "Sayed": {
+    "Math": "B",
+    "Science": "B",
+    "Draw": "B",
+    "Sports": "D",
+    "Thinking": "A"
+  },
+  "Mahmoud": {
+    "Math": "D",
+    "Science": "A",
+    "Draw": "A",
+    "Sports": "B",
+    "Thinking": "B"
+  }
+}
+for student, subjects in students.items():
+    print("------------------------------")
+    print(f"-- Student Name: {student}")
+    print("------------------------------")
+    total_score = 0
+    for subject, rank in subjects.items():
+        if rank == 'A':
+            print(f'{subject} => {rank} => 100 Points')
+            total_score += 100
+        elif rank == 'B':
+            print(f'{subject} => {rank} => 80 Points')
+            total_score += 80
+        elif rank == 'C':
+            print(f'{subject} => {rank} => 40 Points')
+            total_score += 40
+        elif rank == 'D':
+            print(f'{subject} => {rank} => 20 Points')
+            total_score += 20
+    print(f"Total Score For {student} Is {total_score} Points.")
+
+#another solution
+for student in students:
+    print("------------------------------")
+    print(f"-- Student Name: {student}")
+    print("------------------------------")
+    total_score = 0
+    for subject in students[student]:
+        rank = students[student][subject]
+        if rank == 'A':
+            print(f'{subject} => {rank} => 100 Points')
+            total_score += 100
+        elif rank == 'B':
+            print(f'{subject} => {rank} => 80 Points')
+            total_score += 80
+        elif rank == 'C':
+            print(f'{subject} => {rank} => 40 Points')
+            total_score += 40
+        elif rank == 'D':
+            print(f'{subject} => {rank} => 20 Points')
+            total_score += 20
+    print(f"Total Score For {student} Is {total_score} Points.")
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
