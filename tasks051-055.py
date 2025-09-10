@@ -15,3 +15,15 @@ for num in my_nums:
 print("All Numbers Printed Successfully.")
 print("--------------------task 1 done -----------------------")
 #---------------------------------------------------------------
+# Problem 02:
+# Use a for loop to print all the numbers from 1 to 20.
+# Skip the numbers 6, 8, and 12.
+# Use the zfill() method to print the numbers with leading zeros.
+
+for num in range(1, 21):
+    if num == 6 or num == 8 or num == 12:
+        continue
+    #print(num, type(num))
+    print(str(num).zfill(2))
+print("--------------------task 2 done -----------------------")
+#---------------------------------------------------------------
