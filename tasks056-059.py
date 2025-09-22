@@ -83,4 +83,19 @@ show_skills("Ahmed", "Python", "Django", "Flask", "Machine Learning", "AI")
 
 print("--------------------task 3 done -----------------------")
 #---------------------------------------------------------------
-
+'''
+Problem 04:
+Create a function named say_hello
+The function accepts three parameters: name, age, and country
+If no name is provided, print "Hello Unknown Your Age Is Unknown And You Live In Unknown"
+If no age is provided, print "Hello [name] Your Age Is Unknown And You Live In [country]"
+If no country is provided, print "Hello [name] Your Age Is [age] And You Live In Unknown"
+If all parameters are provided, print "Hello [name] Your Age Is [age] And You Live In [country]"
+'''
+ 
+def say_hello(name="Unknown", age="Unknown", country="Unknown"):
+    return f"Hello {name} Your Age Is {age} And You Live In {country}"
+# Test cases
+print(say_hello("Osama", 38, "Egypt"))          # Hello Osama Your Age Is 38 And You Live In Egypt
+print(say_hello("Ahmed", 25))                    # Hello Ahmed Your Age Is 25 And You Live In Unknown
+print(say_hello())                               # Hello Unknown Your Age Is Unknown And You Live In Unknown
