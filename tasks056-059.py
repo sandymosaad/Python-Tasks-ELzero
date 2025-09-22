@@ -61,3 +61,26 @@ print(addition(10, 5, 20, 30, 5))  # 40
 
 print("--------------------task 2 done -----------------------")
 #---------------------------------------------------------------
+''' 
+Problem 03:
+Create a function named show_skills
+The function accepts two parameters: a string parameter for the name, and a variable number of skills
+If no skills are provided, print "Hello [name] You Have No Skills To Show"
+If skills are provided, print "Hello [name] Your Skills Are:" followed by each skill in a new line
+'''
+def show_skills(name , *skills):
+    if not skills:
+        print(f"Hello {name} You Have No Skills To Show")
+    else:    
+        print(f"Hello {name} Your Skills Are:")
+        for skill in skills:
+            print(f"- {skill}")
+
+# Test cases
+show_skills("Sandy", "HTML", "CSS", "JavaScript")
+show_skills("Osama")
+show_skills("Ahmed", "Python", "Django", "Flask", "Machine Learning", "AI")
+
+print("--------------------task 3 done -----------------------")
+#---------------------------------------------------------------
+
