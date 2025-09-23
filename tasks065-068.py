@@ -1,0 +1,48 @@
+'''
+Problem 1:
+- Create Python folder on desktop
+- Create assign.py inside Python folder
+- Create 50 text files (txt1 to txt50)
+- Write "Elzero Web School => {number}" in each file
+- Make file 25 empty and name it special-text
+- Print current working directory, file path, filename, and total files count
+'''
+
+'''
+import os
+'''
+import os
+
+# Get desktop path and create Python folder
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+python_folder = os.path.join(desktop_path, "Python")
+os.makedirs(python_folder, exist_ok=True)
+
+def create_text_files():
+    """Create 50 text files with specified content"""
+    # Create assign.py first
+    assign_path = os.path.join(python_folder, "assign.py")
+    open(assign_path, 'w').close()
+    
+    # Create 50 text files
+    for i in range(1, 51):
+        if i == 25:
+            # Create special empty file
+            filename = "special-text.txt"
+            open(os.path.join(python_folder, filename), 'w').close()
+        else:
+            # Create normal numbered files
+            filename = f"txt{i}.txt"
+            with open(os.path.join(python_folder, filename), 'w') as f:
+                f.write(f"Elzero Web School => {i}\n")
+                f.write(os.getcwd() + "\n")  # Current working directory
+                f.write(os.path.dirname(f.name) + "\n")  # File path
+                f.write(os.path.basename(f.name) + "\n")  # File name
+    
+    # Print total files count
+    files_count = len([f for f in os.listdir(python_folder) if os.path.isfile(os.path.join(python_folder, f))])
+    print(f"Total Files Count: {files_count}")
+
+# Execute the function
+create_text_files()
+print(f"Files created in: {python_folder}")
