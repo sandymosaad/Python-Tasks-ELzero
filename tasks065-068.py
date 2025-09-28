@@ -64,6 +64,31 @@ def append_to_file():
 
 append_to_file()
 print("--------------------problem 2 done -----------------------")
-#---------------------------------------------------------------
+#--------------------------------------------------------------
 
+"""
+Problem 3:
+- Open txt1.txt and analyze its content
+- Print number of lines
+- Print number of words
+- Print number of characters
+- Print number of 'l' characters (case insensitive)
+"""
 
+def read_info_file():
+    with open(os.path.join(python_folder, 'txt1.txt'), 'r') as file:
+        # Read content once
+        content = file.read()
+        # Reset file pointer to start
+        file.seek(0)
+        # Get lines
+        lines = file.readlines()
+        
+        # Calculate all required information
+        print(f"Number Of Lines Is => {len(lines)}")
+        print(f"Number Of Words Is => {len(content.split())}")
+        print(f"Number Of Characters Is => {len(content)}")
+        print(f"Number Of 'l' Char Is => {content.lower().count('l')}")
+
+read_info_file()
+print("--------------------problem 3 done -----------------------")
