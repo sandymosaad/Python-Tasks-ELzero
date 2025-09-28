@@ -19,11 +19,11 @@ python_folder = os.path.join(desktop_path, "Python")
 os.makedirs(python_folder, exist_ok=True)
 
 def create_text_files():
-    """Create 50 text files with specified content"""
     # Create assign.py first
     assign_path = os.path.join(python_folder, "assign.py")
     open(assign_path, 'w').close()
-    
+
+    """Create 50 text files with specified content"""
     # Create 50 text files
     for i in range(1, 51):
         if i == 25:
@@ -46,3 +46,24 @@ def create_text_files():
 # Execute the function
 create_text_files()
 print(f"Files created in: {python_folder}")
+
+#--------------------------problem 1 done -----------------------
+#---------------------------------------------------------------
+"""
+Problem 2:
+- Open txt1.txt file
+- Keep first line (Elzero Web School => 1)
+- Append 'Appended => Elzero Web School' 50 times
+- Each append on a new line
+"""
+
+def append_to_file():
+    with open(os.path.join(python_folder, 'txt1.txt'), 'a') as file:
+        for _ in range(50):
+            file.write('Appended => Elzero Web School\n')
+
+append_to_file()
+print("--------------------problem 2 done -----------------------")
+#---------------------------------------------------------------
+
+
