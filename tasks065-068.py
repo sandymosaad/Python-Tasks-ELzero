@@ -92,3 +92,24 @@ def read_info_file():
 
 read_info_file()
 print("--------------------problem 3 done -----------------------")
+#-------------------------------------------------------------------
+
+'''
+problem 4:
+delete last 10 files 
+
+'''
+
+import re
+txt_files = [f for f in os.listdir(python_folder) if f.endswith(".txt")]
+
+
+txt_files = [f for f in os.listdir(python_folder) if re.match(r"^txt\d+\.txt$", f)]
+
+# ترتيب حسب الرقم
+txt_files.sort(key=lambda x: int(re.search(r"\d+", x).group()))
+last_10_files = txt_files[-10:]
+
+for file in last_10_files:
+    os.remove(os.path.join(python_folder, file))
+    print(f"Deleted: {file}")
