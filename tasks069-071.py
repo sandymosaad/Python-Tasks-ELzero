@@ -85,5 +85,59 @@ n = next(n for n in range(1, 100) if round(sum(range(n)) / n) == max(0, 3, 10, 2
 print(f"n = {n}, Output => Good")   
 #------------------------------task 3 done -----------------------
 #---------------------------------------------------------------
+'''
+Problem 04:
+explain the my_all and my_any functions in your own words
+# my_all function checks if all elements in the given iterable are truthy (i.e., evaluate to True).
+# It returns True if all elements are truthy, and False if any element is falsy (i.e., evaluates to False).
+# If the iterable is empty, it returns True by definition, as there are no falsy elements.
+# my_any function checks if any element in the given iterable is truthy.    
+# It returns True if at least one element is truthy, and False if all elements are falsy.
+# If the iterable is empty, it returns False by definition, as there are no truthy elements.
+# Both functions iterate through the elements of the iterable and use conditional checks to determine their return values.
+'''
 
+def my_all(iterable):
+    for element in iterable:
+        if not element:
+            return False
+    return True
+# Tests
+print(my_all([1, 2, 3]))          # True
+print(my_all([1, 2, 3, 0]))       # False
+print(my_all([]))                  # True
 
+def my_any(iterable):
+    for element in iterable:
+        if element:
+            return True
+    return False
+# Tests
+print(my_any([0, "", None]))      # False
+print(my_any([0, "", None, 1]))   # True
+
+def my_min(iterable):
+    min_value = None
+    for element in iterable:
+        if min_value is None or element < min_value:
+            min_value = element
+    return min_value
+# Tests
+print(my_min([3, 1, 4, 1, 5, 9]))  # 1
+print(my_min([-3, -1, -4, -1, -5, -9]))  # -9
+print(my_min([42]))                 # 42
+print(my_min([]))                   # None
+
+def my_max(iterable):
+    max_value = None
+    for element in iterable:
+        if max_value is None or element > max_value:
+            max_value = element
+    return max_value
+# Tests
+print(my_max([3, 1, 4, 1, 5, 9]))  # 9
+print(my_max([-3, -1, -4, -1, -5, -9]))  # -1
+print(my_max([42]))                 # 42
+print(my_max([]))                   # None
+
+#------------------------------task 4 done -----------------------
