@@ -60,3 +60,30 @@ print(v)
 
 #------------------------------task 2 done -----------------------
 #---------------------------------------------------------------
+'''
+Problem 03:
+What is the output of the code below
+n = ??
+
+l = list(range(n))
+
+if round(sum(l) / n) == max(0, 3, 10, 2, -100, -23, 9):
+
+  print("Good")
+
+# Output => Good
+'''
+n=1
+while True:
+    l = list(range(n))
+    if round(sum(l) / n) == max(0, 3, 10, 2, -100, -23, 9):
+        print(f"n = {n}, Output => Good")
+        break
+    n += 1
+# Another way to find n using a generator expression
+n = next(n for n in range(1, 100) if round(sum(range(n)) / n) == max(0, 3, 10, 2, -100, -23, 9))
+print(f"n = {n}, Output => Good")   
+#------------------------------task 3 done -----------------------
+#---------------------------------------------------------------
+
+
