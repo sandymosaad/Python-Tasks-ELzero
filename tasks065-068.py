@@ -113,3 +113,6 @@ last_10_files = txt_files[-10:]
 for file in last_10_files:
     os.remove(os.path.join(python_folder, file))
     print(f"Deleted: {file}")
+
+print("--------------------task 4 done -----------------------")
+#---------------------------------------------------------------
