@@ -27,6 +27,31 @@ def remove_chars_safe(friends_map):
 #----------------------task 1 done -------------------------------------
 #------------------------------------------------------------------------
 
+'''
+-----------------------------------
+Problem 2:
+Filter names ending with 'm'
+-----------------------------------
+'''
+
+friends_filter = ["Osama", "Wessam", "Amal", "Essam", "Gamal", "Othman"]
+
+def get_names(friends_filter):
+    # Using filter() to get names ending with 'm'
+    names_end_wz_m = list(filter(lambda name: name[-1] == 'm', friends_filter))
+    # Alternative way:
+    # names_end_with_m = list(filter(lambda name: name.endswith('m'), friends_filter))
+    return names_end_wz_m
+
+# Get result
+result = get_names(friends_filter)
+
+# Print names that end with 'm'
+for name in result:
+    print(name)
+#-----------------------task 2 done------------------------
+#------------------------------------------------------------
+
 
 
 
