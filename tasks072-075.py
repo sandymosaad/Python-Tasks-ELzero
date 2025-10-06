@@ -68,6 +68,20 @@ print(result)
 #output:96
 #-----------------------task 3 done------------------------
 #------------------------------------------------------------
-
+''' 
+problem 04:
+Loop on tuple, skip numbers, reverse order, index starts at 50
+'''
+skills = ("HTML", "CSS", 10, "PHP", "Python", 20, "JavaScript")
+reversed_skills = reversed(skills)
+index=50
+for skill in reversed_skills:
+    if isinstance(skill, str):
+        print(f'{index}-{skill}')
+        index+=1
+    else:
+        index+=1
+#-----------------------task 4 done------------------------
+#------------------------------------------------------------
 
 
