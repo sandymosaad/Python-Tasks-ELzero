@@ -51,7 +51,23 @@ for name in result:
     print(name)
 #-----------------------task 2 done------------------------
 #------------------------------------------------------------
+'''
+problem 03:
+make a function to multiply all numbers in a list.
+'''
+nums = [2, 4, 6, 2]
+def multiply(numbers):
+    result = 1
+    for num in numbers:
+        result *= num
+    return result
 
+result = multiply(nums)
+print(result)
+
+#output:96
+#-----------------------task 3 done------------------------
+#------------------------------------------------------------
 
 
 
