@@ -14,3 +14,32 @@ print("\n# Module Methods Content Here")
 print(dir(random))
 #------------------------task 1 done-------------------------
 #----------------------------------------------------------
+'''
+problem 02:
+'''
+import os
+current_path = os.getcwd()
+
+python_folder = os.path.join(current_path, 'python')
+
+if not os.path.exists(python_folder):
+    os.mkdir(python_folder)
+
+print("Folder created at:", python_folder)
+
+main_file = os.path.join(python_folder, 'main.py')
+mod_file = os.path.join(python_folder, 'my_mod.py')
+
+open(main_file,'a')
+open(mod_file,'a')
+
+
+print("Main file path:", main_file)
+print("Module file path:", mod_file)
+
+#----------------------task 2 done ----------------
+#--------------------------------------------------
+
+
+
+
