@@ -16,6 +16,8 @@ print(dir(random))
 #----------------------------------------------------------
 '''
 problem 02:
+Create folder named python if not exists and create 2 files main.py and my_mod.py
+create function in main and imort in my_mode and print the result
 '''
 import os
 current_path = os.getcwd()
@@ -39,7 +41,6 @@ print("Module file path:", mod_file)
 
 #----------------------task 2 done ----------------
 #--------------------------------------------------
-
 
 
 
