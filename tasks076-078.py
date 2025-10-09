@@ -48,5 +48,14 @@ Import only the function say_welcome from the file my_mod.py
 into the main file main.py, and then call the function inside the main file.
 
 '''
-    
+
+#----------------------task 3 done ----------------
+#--------------------------------------------------
+
+'''
+problem 4:
+Import only the function say_welcome from the file my_mod.py 
+into the main file main.py, and named it new_welcome then call the function inside the main file.
+
+'''
 

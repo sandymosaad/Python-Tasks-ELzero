@@ -9,3 +9,11 @@
 from main import say_welcome
 
 print(say_welcome())
+
+#-------------------task 3 done -----------
+#------------------------------------------------
+
+#task 4
+from main import say_welcome as new_welcome
+
+print(new_welcome())
