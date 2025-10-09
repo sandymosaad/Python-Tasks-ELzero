@@ -22,3 +22,44 @@ for c in reverse_string("Elzero"):
 #--------------------task 1 done ----------------
 #-------------------------------------------------
 
+'''
+problem 02:
+Create a Decorator Function that does the following:
+
+Prints a message before the main function:
+"Sugar Added From Decorators"
+
+Prints a separator made of # symbols after the main function.
+
+Then, use this decorator with the existing functions.
+Expected Output:
+
+Sugar Added From Decorators
+Tea Created
+####################
+Sugar Added From Decorators
+Coffe Created
+####################
+'''
+
+# Create Your Decorator Here
+def my_decorator(func):
+    def wrapper():
+        print("Sugar Added From Decorators")
+        func()
+        print("#" * 20)
+    return wrapper
+
+
+@my_decorator
+def make_tea():
+  print("Tea Created")
+
+@my_decorator
+def make_coffe():
+  print("Coffe Created")
+
+make_tea()
+make_coffe()
+#-------------------------task 2 done ---------------------
+#-----------------------------------------------------------
