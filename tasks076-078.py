@@ -42,5 +42,11 @@ print("Module file path:", mod_file)
 #----------------------task 2 done ----------------
 #--------------------------------------------------
 
+'''
+problem 03:
+Import only the function say_welcome from the file my_mod.py 
+into the main file main.py, and then call the function inside the main file.
 
+'''
+    
 
