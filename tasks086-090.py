@@ -35,3 +35,50 @@ final_string = ''.join(my_data)
 print(final_string)  # Elzero
 #-----------------task 2 done -------------
 #------------------------------------------
+
+'''
+problem 03:
+You have an image of size 1200x800.
+Each letter is inside a 400x400 box.
+- Crop the letter "L"
+- Convert it to grayscale
+- Save it beside the original image
+- Then crop the second row of letters
+- Rotate it 180 degrees, convert to grayscale
+- Save the result beside the original image
+'''
+
+from PIL import Image
+import os
+
+# Define paths
+base_path = r"E:\ITI\Pytho-Tasks-ElZero"
+img_path = os.path.join(base_path, "elzero-pillow.png")
+
+# Open and show the image
+my_img = Image.open(img_path)
+my_img.show()
+
+# === 1️⃣ Crop letter L (top-right 400x400 box) ===
+L_box = (400, 0, 800, 400)
+cropped_L = my_img.crop(L_box)
+
+# Convert to grayscale and save
+gray_L = cropped_L.convert("L")
+gray_L_path = os.path.join(base_path, "Letter_L_grayscale.png")
+gray_L.save(gray_L_path)
+gray_L.show()
+
+# === 2️⃣ Crop second row (bottom 400px) ===
+row_box = (0, 400, 1200, 800)
+cropped_row = my_img.crop(row_box)
+
+# Convert to grayscale and rotate 180 degrees
+gray_rotated_row = cropped_row.convert("L").rotate(180)
+
+# Save and show
+gray_rotated_row_path = os.path.join(base_path, "grayscale_cropped_row_image_rotated.png")
+gray_rotated_row.save(gray_rotated_row_path)
+gray_rotated_row.show()
+
+print(" Letter L and second row processed successfully!")
