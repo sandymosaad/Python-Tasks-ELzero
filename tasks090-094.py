@@ -97,3 +97,18 @@ else:
 
 #------------------Task 02 Done --------------
 #---------------------------------------------
+
+'''
+problem 03:
+Use Type Hinting in the function to specify parameter and return types.
+'''
+
+def calculate(num1: int, num2: int) -> int:
+    """Return the sum of two numbers."""
+    return num1 + num2
+
+# Test the function
+print(calculate(20, 30))  # Output => 50
+
+#------------------Task 03 Done ----------------
+#-----------------------------------------------
