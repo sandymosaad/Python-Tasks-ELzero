@@ -67,4 +67,33 @@ else:
 
 #------------------Task 01 Done -------------
 #--------------------------------------------
+#---------------------------------------------
 
+'''
+problem 02:
+Handle user input with try, except, else
+'''
+
+# LETTER = input("Add Letter From A to Z: ")
+LETTER='S'
+
+try:
+    # Check if user entered more than one character
+    if len(LETTER) != 1:
+        raise ValueError("You Must Write One Character Only")
+
+    # Check if input is not a capital letter A–Z
+    elif not LETTER.isalpha() or not LETTER.isupper():
+        raise Exception("The Letter Not In A - Z")
+
+except ValueError as e:
+    print(e)
+
+except Exception as e:
+    print(e)
+
+else:
+    print(f"You Typed {LETTER}")
+
+#------------------Task 02 Done --------------
+#---------------------------------------------
