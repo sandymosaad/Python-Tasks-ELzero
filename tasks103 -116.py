@@ -104,3 +104,27 @@ print(user_one.full_details()) # Hello Mr Osama M. [02] Years To Reach 40
 print(user_two.full_details()) # Hello Mrs Eman O. [15] Years To Reach 40
 #------------------------------------Task 2 Done -------------------------------------
 #-------------------------------------------------------------------------------------
+'''
+problem 03:
+complete the contents of the class Message so that it produces the expected output shown in the example.
+
+🧩 Requirements:
+
+Create a class named Message.
+
+Inside the class, define a static method called print_message().
+
+The method should return the string:
+"Hello From Class Message"
+'''
+class Message:
+    @staticmethod
+    def print_message():
+        return "Hello From Class Message"
+
+print(Message.print_message())
+
+# Output
+# Hello From Class Message
+#------------------------------------- Task 3 Done -------------------------------
+#---------------------------------------------------------------------------------
