@@ -51,3 +51,56 @@ print(f"Price In Egypt Is {game_one.price_in_pounds()}", end="")
 # "Game Name Is "Ys", Developer Is "Falcom", Release Date Is "2010", Price In Egypt Is 780.0 Egyptian Pounds"
 #------------------------------------Task 1 Done --------------------------------
 #---------------------------------------------------------------------------------
+'''
+problem 02:
+complete the contents of a Python class named User so that it produces the expected output shown in the example.
+
+🧩 Requirements:
+
+Create a class called User.
+
+The class should have an __init__ method that takes:
+
+first_name
+
+last_name
+
+age
+
+gender
+
+Add a method named full_details() that:
+
+Displays a greeting using:
+
+"Mr" if the gender is "Male"
+
+"Mrs" if the gender is "Female"
+
+Shows the user’s first name, the first letter of their last name followed by a dot, and
+
+Calculates how many years are left for the user to reach 40 years old.
+
+The message should follow this format:
+
+Hello Mr Osama M. [02] Years To Reach 40
+'''
+class User:
+    def __init__(self,first_name,last_name,age,gender):
+        self.fname = first_name
+        self.lname = last_name
+        self.age = age
+        self.gender = gender
+
+    def full_details(self):
+        years_to_40 =40 -self.age
+        title = "Mr" if self.gender == "Male" else "Mrs"
+        return f" Hello {title} {self.fname} {self.lname[0]}. [{years_to_40:02}] Years To Reach 40 "
+
+user_one = User("Osama", "Mohamed", 38, "Male")
+user_two = User("Eman", "Omar", 25, "Female")
+
+print(user_one.full_details()) # Hello Mr Osama M. [02] Years To Reach 40
+print(user_two.full_details()) # Hello Mrs Eman O. [15] Years To Reach 40
+#------------------------------------Task 2 Done -------------------------------------
+#-------------------------------------------------------------------------------------
