@@ -21,3 +21,24 @@ print(matches)
 
 #------------------Task 01 Done --------------
 #---------------------------------------------
+'''
+problem 02:
+You have the following string:
+
+text = "EElzero11 LElzero111 ZElzero1111 EElzero11111 RElzero111111 OElzero1111111"
+
+
+Write a regular expression to match only the word "Elzero" that comes after the letter "L",
+but without including the letter "L" in the result.
+'''
+
+text = "EElzero11 LElzero111 ZElzero1111 EElzero11111 RElzero111111 OElzero1111111"
+
+pattern = r"(?<=\bL)Elzero"
+match = re.findall(pattern, text)
+
+print(match)
+
+#------------------Task 02 Done --------------
+#--------------------------------------------
+
