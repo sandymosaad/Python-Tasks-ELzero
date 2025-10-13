@@ -197,3 +197,66 @@ my_games_count.show_games()
 #---------------------------------- Task 4 Done -------------------------
 #-----------------------------------------------------------------
 
+'''
+problem 05:You are given a main class named Members that contains two attributes and one method.
+Your task is to create two new classes — Admins and Moderators — that inherit from the Members class using two different inheritance approaches.
+
+Then, create objects from each class and display the required output as shown in the example.
+
+🧩 Requirements:
+
+A main class Members is already defined with:
+
+Attributes: name, permission
+
+Method: show_info() that returns
+"Your Name Is {name} And You Are {permission}"
+
+Create a class Admins that inherits from Members using normal inheritance syntax.
+
+Create another class Moderators that inherits from Members using a different inheritance method (e.g., using the type() function or by reusing the base class in a new definition).
+
+Create two objects:
+
+member_one from the Admins class
+
+member_two from the Moderators class
+
+Print the info for both members as shown in the output.
+
+'''
+# Main Class
+class Members:
+
+  def __init__(self, n, p):
+
+    self.name = n
+
+    self.permission = p
+
+  def show_info(self):
+
+    return f"Your Name Is {self.name} And You Are {self.permission}"
+
+# Create Admin Class Here
+class Admins(Members):
+    def __init__(self, n, p):
+        super().__init__(n, p)
+# Create Moderators Class Here
+class Moderators(Members):
+    def __init__(self,n,p):
+        Members.__init__(self,n,p)
+    
+member_one = Admins("Osama", "Admin")
+member_two = Moderators("Ahmed", "Moderator")
+
+print(member_one.show_info())
+# Output
+# Your Name Is Osama And You Are Admin
+
+print(member_two.show_info())
+# Output
+# Your Name Is Ahmed And You Are Moderator
+
+#-------------------- task 05 done ----------------------
+#-----------------------------------------------------------
