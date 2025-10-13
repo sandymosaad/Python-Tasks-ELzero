@@ -128,3 +128,72 @@ print(Message.print_message())
 # Hello From Class Message
 #------------------------------------- Task 3 Done -------------------------------
 #---------------------------------------------------------------------------------
+
+
+
+
+
+
+'''
+problem 04:
+complete the contents of the class Games so that it behaves differently depending on the type of data passed to it — whether a string, a list, or a number — and produces the required output as shown in the examples.
+
+🧩 Requirements:
+
+Create a class named Games.
+
+The class should take one argument in its constructor (e.g. game name(s) or count).
+
+Inside the class, define a method called show_games() that behaves as follows:
+
+If the passed argument is a string, print:
+
+I Have One Game Called "GameName"
+
+
+If the passed argument is a list, print:
+
+I Have Many Games:
+-- Game1
+-- Game2
+-- Game3
+
+
+If the passed argument is a number, print:
+
+I Have X Game.
+'''
+class Games:
+    def __init__(self,games):
+        self.games = games
+    def show_games(self):
+        if isinstance(self.games, str):
+            print(f' I Have One Game Called "{self.games}"')
+        elif isinstance(self.games, list):
+            print(f' I Have Many Games:')
+            for game in self.games:
+                print(f' -- {game}')
+        elif isinstance(self.games, int):
+            print(f' I Have {self.games} Game.')
+
+my_game = Games("Shadow Of Mordor")
+my_games_names = Games(["Ys II", "Ys Oath In Felghana", "YS Origin"])
+my_games_count = Games(80)
+
+my_game.show_games()
+# Ouput
+# I Have One Game Called "Shadow Of Mordor"
+
+my_games_names.show_games()
+# Ouput
+# I Have Many Games:
+# -- Ys II
+# -- Ys Oath In Felghana
+# -- YS Origin
+
+my_games_count.show_games()
+# Output
+# I Have 80 Game.
+#---------------------------------- Task 4 Done -------------------------
+#-----------------------------------------------------------------
+
