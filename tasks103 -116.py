@@ -260,3 +260,64 @@ print(member_two.show_info())
 
 #-------------------- task 05 done ----------------------
 #-----------------------------------------------------------
+'''
+problem 06:
+You have three classes, each containing one property:
+
+class A:
+  def __init__(self, one):
+    self.one = one
+
+class B:
+  def __init__(self, two):
+    self.two = two
+
+class C:
+  def __init__(self, three):
+    self.three = three
+
+
+Your task is to create a new class named Text that inherits all the properties from the three classes above.
+Then, print the final name in the required format as shown below 👇
+
+Example Output:
+
+The Name Is Elzero
+'''
+class A:
+
+  def __init__(self, one):
+
+    self.one = one
+
+class B:
+
+  def __init__(self, two):
+
+    self.two = two
+
+class C:
+
+  def __init__(self, three):
+
+    self.three = three
+
+class Text(A, B, C):
+  def __init__(self, one, two, three):
+    A.__init__(self, one)
+    B.__init__(self, two)
+    C.__init__(self, three)
+
+  def show_name(self):
+    return f"The Name Is {self.one}{self.two}{self.three}"
+
+# Create Object
+the_name = Text("El", "ze", "ro")
+
+print(the_name.show_name())
+
+
+# Ouput
+# The Name Is Elzero
+#------------------------ Task 06 Done ----------------------
+#------------------------------------------------------------
