@@ -111,7 +111,15 @@ for user in users:
         print(f'Error adding user {user[0]}: {e}')
 
         
-conn.commit()
-conn.close()
+# conn.commit()
+# conn.close()
 #----------------------------- Task 03 Done ----------------------------
+#-----------------------------------------------------------------------
+'''
+problem 04:
+select last row from users table
+'''
+last_user =cur.execute('SELECT * FROM users ORDER BY id DESC LIMIT 1')
+print(last_user.fetchone())
+#------------------------------- Task 04 Done --------------------------
 #-----------------------------------------------------------------------
