@@ -72,5 +72,46 @@ cur.execute('''
 print('Table created')
 
 # Commit changes and close connection
+# conn.commit()
+# conn.close()
+
+#-----------------------------Task 02 Done ------------------------
+#------------------------------------------------------------------
+'''
+problem 03:
+Continue from the previous assignment where you created the Python folder on the Desktop and the SQLite database elzero.db with a users table.
+Write a Python script that:
+Connects to the existing SQLite database elzero.db in the Python folder on the Desktop.
+Inserts any random data (5 different records) for 5 users into the users table.
+Each user record must include: name, email, and birthdate (use appropriate data formats).
+Ensures that the script is safe to run multiple times:
+Because the name and email columns are declared UNIQUE, running the script again will normally raise sqlite3.IntegrityError for duplicates.
+Your script must ignore these duplicate-entry errors so that repeated runs do not stop the program or show an unhandled exception.
+You may use one of these approaches (choice is up to you):
+Use a parameterized query with error handling (try/except) and skip duplicates, or
+Use an SQL statement that ignores duplicates (e.g., INSERT OR IGNORE or ON CONFLICT), or
+Check existence first then insert.
+Commit the transaction and close the database connection.
+Optionally print a friendly message showing which users were inserted and which were skipped due to uniqueness (or simply print a final success message).
+'''
+# Insert 5 users
+users = [
+    ('Sandy', 'sandy@gmail.com', '2001-04-22'),
+    ('Mina', 'mina@gmail.com', '1999-08-10'),
+    ('John', 'john@example.com', '1995-12-05'),
+    ('Lina', 'lina@yahoo.com', '2003-03-17'),
+    ('Mark', 'mark@hotmail.com', '2000-06-09')
+]
+
+for user in users:
+    try:
+        cur.execute('INSERT INTO users (name, email, birthdate) VALUES (?,?,?)', user)
+        print(f'User {user[0]} added')
+    except sqlite3.IntegrityError as e:
+        print(f'Error adding user {user[0]}: {e}')
+
+        
 conn.commit()
 conn.close()
+#----------------------------- Task 03 Done ----------------------------
+#-----------------------------------------------------------------------
