@@ -123,3 +123,42 @@ last_user =cur.execute('SELECT * FROM users ORDER BY id DESC LIMIT 1')
 print(last_user.fetchone())
 #------------------------------- Task 04 Done --------------------------
 #-----------------------------------------------------------------------
+'''
+problem 05:
+Ask the user (from the terminal) to enter the ID of the user they want to delete.
+Use a DELETE SQL command to remove the user with that ID from the database.
+If the ID does not exist, display an error message:
+User Not Found
+If the user is successfully deleted, display a message like:
+User with ID 3 deleted
+After deletion, print the remaining users in the table in the following format:
+ID => 1, Name => Sandy, Email => sandy@gmail.com, Date Of Birth => 2001-04-22
+Handle all possible errors using try and except, and make sure to close the database connection at the end.
+'''
+# Connect to the database
+
+# Ask user for ID to delete
+user_id_to_delete = int(input("Enter User ID to delete: "))
+
+try:
+    # Delete the user
+    cur.execute('DELETE FROM users WHERE id = ?', (user_id_to_delete,))
+
+    # Check if any row was deleted
+    if cur.rowcount == 0:
+        print("❌ User Not Found")
+    else:
+        print(f"✅ User with ID {user_id_to_delete} deleted")
+
+        # Show remaining users
+        print("\nShow Other Data:")
+        all_users = cur.execute('SELECT * FROM users')
+        for user in all_users.fetchall():
+            print(f"ID => {user[0]}, Name => {user[1]}, Email => {user[2]}, Date Of Birth => {user[3]}")
+
+except sqlite3.Error as e:
+    print(f"Database error: {e}")
+
+finally:
+    conn.commit()
+    conn.close()
