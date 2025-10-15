@@ -77,3 +77,30 @@ matches = re.findall(pattern, text)
 print(matches)
 #------------------------- Task 03 Done ------------------------
 #---------------------------------------------------------------
+'''
+problem 04:
+Write a Regular Expression that matches only the first 4 links.
+
+http://www.elzero.org:8888/link.php
+https://elzero.org:8888/link.php
+http://www.elzero.com/link.py
+https://elzero.com/link.py
+http://www.elzero.net
+https://elzero.net
+'''
+text = """
+http://www.elzero.org:8888/link.php
+https://elzero.org:8888/link.php
+http://www.elzero.com/link.py
+https://elzero.com/link.py
+http://www.elzero.net
+https://elzero.net
+"""
+
+pattern = r"https?://(www\.)?elzero\.(org|com)(:\d+)?/[\w.]+"
+
+matches = re.findall(pattern, text)
+for match in re.finditer(pattern, text):
+    print(match.group())
+#----------------------- Task 04 Done --------------------
+#---------------------------------------------------------
