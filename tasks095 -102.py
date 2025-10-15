@@ -104,3 +104,44 @@ for match in re.finditer(pattern, text):
     print(match.group())
 #----------------------- Task 04 Done --------------------
 #---------------------------------------------------------
+
+'''
+problem 05:
+You have the following string:
+
+http
+https
+abcd
+abcd
+
+
+Write five different Regular Expression patterns to match only the first two lines (http and https) as shown in the example.
+'''
+import re
+
+text = """
+http
+https
+abcd
+abcd
+"""
+
+# Method 1: Using optional 's'
+pattern1 = r"https?"
+print(re.findall(pattern1, text))
+
+# Method 2: Using alternation
+pattern2 = r"http|https"
+print(re.findall(pattern2, text))
+
+# Method 3: Using grouping
+pattern3 = r"http(s)?"
+print(re.findall(pattern3, text))
+
+# Method 4: Using ^ and $
+pattern4 = r"^https?$"
+print(re.findall(pattern4, text, re.MULTILINE))
+
+# Method 5: Using lookahead
+pattern5 = r"http(?=s|$)"
+print(re.findall(pattern5, text))
