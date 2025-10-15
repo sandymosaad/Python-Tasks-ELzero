@@ -41,4 +41,39 @@ print(match)
 
 #------------------Task 02 Done --------------
 #--------------------------------------------
+'''
+problem 03:
+You are given the following string containing several phone numbers in different formats.
+Your task is to write a Regular Expression that matches only the valid phone numbers as shown in the image/example.
 
+String:
++(0100) 600-1234
++(0100) 60-1234
+(0100) 6000-1234
+01006001234
+0100 600 1234
+(0100) 600-1
+(0100) 600-12
+
+Requirement:
+Write a Regular Expression that matches only the first three numbers, which are the valid formats:
++(0100) 600-1234
++(0100) 60-1234
+(0100) 6000-1234
+'''
+import re
+
+text = """+(0100) 600-1234
++(0100) 60-1234
+(0100) 6000-1234
+01006001234
+0100 600 1234
+(0100) 600-1
+(0100) 600-12"""
+
+pattern = r"\+?\(0100\)\s\d{2,4}-\d{4}"
+
+matches = re.findall(pattern, text)
+print(matches)
+#------------------------- Task 03 Done ------------------------
+#---------------------------------------------------------------
