@@ -35,3 +35,30 @@ if __name__ == '__main__':
     unittest.main()
 #----------------------------------------- Task 01 Done ----------------------------------------
 #-----------------------------------------------------------------------------------------------
+
+'''
+problem 02:
+create_serial_number(count) that generates a random serial number.
+
+Requirements:
+The serial number should include lowercase English letters (a–z) and digits (0–9).
+The function should accept one argument count, which determines how many characters (letters or digits) are included.
+After every 4 characters, a hyphen (-) should be added — except at the end of the serial number.
+The function should print the final serial number as a single string.
+'''
+
+import string
+import random
+
+def create_serial_number(count):
+    serial_number = []
+    all_char = list(string.ascii_lowercase + string.digits)
+    
+    for i in range(count):
+        serial_number.append(random.choice(all_char))
+        if (i + 1) % 4 == 0 and i != count - 1:
+            serial_number.append('-')
+
+    print(''.join(serial_number))
+
+create_serial_number(12)
