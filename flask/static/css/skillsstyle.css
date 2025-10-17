@@ -1,0 +1,30 @@
+.skills-box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    width: 450px;
+}
+
+.skills-box .skill-name{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.skills-box .skill-prog{
+    background-color: #f7f7f7;
+    padding: 10px;
+    position: relative;
+}
+
+.skills-box .skill-prog span{
+    position: absolute;
+    top:0%;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #50d8a4;
+
+}
